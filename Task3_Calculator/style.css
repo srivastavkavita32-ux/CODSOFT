@@ -1,0 +1,123 @@
+:root {
+    --bg-color: #0f172a;
+    --calc-bg: #1e293b;
+    --display-bg: #0f172a;
+    --text-main: #f8fafc;
+    --text-muted: #64748b;
+    --btn-num: #334155;
+    --btn-num-hover: #475569;
+    --btn-op: #f97316;
+    --btn-op-hover: #ea580c;
+    --btn-action: #475569;
+    --btn-action-hover: #64748b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
+
+.calculator {
+    width: 350px;
+    background-color: var(--calc-bg);
+    padding: 24px;
+    border-radius: 24px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* Display Screen styles */
+.display {
+    background-color: var(--display-bg);
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    text-align: right;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+#history {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    min-height: 24px;
+}
+
+#input {
+    color: var(--text-main);
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* Grid Layout */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: var(--btn-num);
+    color: var(--text-main);
+    transition: all 0.15s ease;
+}
+
+.btn:hover {
+    background-color: var(--btn-num-hover);
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+/* Operator and special button overrides */
+.btn.operator {
+    background-color: var(--btn-op);
+    color: white;
+}
+
+.btn.operator:hover {
+    background-color: var(--btn-op-hover);
+}
+
+.btn.action {
+    background-color: var(--btn-action);
+}
+
+.btn.action:hover {
+    background-color: var(--btn-action-hover);
+}
+
+.btn.equals {
+    grid-column: span 1;
+    background-color: #10b981;
+}
+
+.btn.equals:hover {
+    background-color: #059669;
+}
+
+.btn.double {
+    grid-column: span 2;
+}
