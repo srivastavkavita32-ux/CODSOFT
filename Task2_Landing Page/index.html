@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minimalist Aesthetic | Landing Page</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">AESTHETIC.</div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Journal</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Curating Elegance In Every Detail</h1>
+    <p>Discover minimalist design, soft textures, and timeless visual storytelling.</p>
+    <a href="#" class="btn">Explore Moodboard</a>
+  </div>
+</section>
+
+<section class="features-section">
+  <h2 class="section-title">The Design Philosophy</h2>
+
+  <div class="grid-container">
+
+    <div class="card">
+      <div class="card-image bg-1"></div>
+      <h3>Classic Silhouettes</h3>
+      <p>Timeless tailoring and pure form that speaks softly but powerfully.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-image bg-2"></div>
+      <h3>Earth & Pastel Palettes</h3>
+      <p>Muted tones blended to create a nostalgic cinematic atmosphere.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-image bg-3"></div>
+      <h3>Tactile Textures</h3>
+      <p>Celebrating silk, chiffon, and natural visual grain aesthetics.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Studio Aesthetic. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

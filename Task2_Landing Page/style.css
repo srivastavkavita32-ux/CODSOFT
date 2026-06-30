@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #faf9f6;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #8a7355;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+  url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1600') center/cover;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  animation: fadeIn 1s ease-in;
+}
+
+.hero-content p {
+  margin: 15px 0 25px;
+  color: #666;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #222;
+  color: #fff;
+  border-radius: 6px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #8a7355;
+  transform: translateY(-3px);
+}
+
+/* FEATURES */
+.features-section {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.grid-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 260px;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card-image {
+  height: 200px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.bg-1 { background: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=600') center/cover; }
+.bg-2 { background: url('https://images.unsplash.com/photo-1509319117193-57bab727e09d?q=80&w=600') center/cover; }
+.bg-3 { background: url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=600') center/cover; }
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 40px;
+  background: #111;
+  color: #aaa;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 8%;
+    padding: 15px;
+    border: 1px solid #eee;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .grid-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
